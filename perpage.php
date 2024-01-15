@@ -15,12 +15,12 @@ class YellowPerpage {
     // Handle page meta data
     public function onParseMetaData($page) {
         if ($this->yellow->page==$page) {
-            $perpageSettings = preg_split("/\s*,\s*/", $this->yellow->system->get("perpageSettings"));
             $perpageRestriction = $this->yellow->system->get("perpageRestriction");
+            $perpageSettings = preg_split("/\s*,\s*/", $this->yellow->system->get("perpageSettings"), -1, PREG_SPLIT_NO_EMPTY);
             foreach ($page->metaData as $key=>$value) {
                 preg_match("/^[a-z]*/", $key, $matches);
                 if ($this->yellow->extension->isExisting($matches[0]) && isset($this->yellow->system->settingsDefaults[$key])) {
-                    if (!$perpageRestriction || in_array($key, $perpageSettings)) {
+                    if (!$perpageRestriction || in_array($key, $perpageSettings) || in_array($matches[0]."*", $perpageSettings)) {
                         $this->yellow->system->set($key, $value);
                     }
                 }

@@ -16,13 +16,13 @@ If you don't want that any system setting may be overridden, then restrict per p
 
 ## Example
 
-Content file with two settings which override the values set for [Filelist](https://github.com/GiovanniSalmeri/yellow-filelist) and [Link](https://github.com/GiovanniSalmeri/yellow-link):
+Content file with two settings which override the values set for [Toc](https://github.com/annaesvensson/yellow-toc) and [Gallery](https://github.com/annaesvensson/yellow-gallery):
 
     ---
     Title: Example page
     Description: Example for your website
-    FilelistCollapse: 0
-    LinkCacheLifeSpan: 60
+    TocHeadingLevels: 2
+    GalleryStyle: zoom
     ---
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut 
     labore et dolore magna pizza. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
@@ -35,7 +35,7 @@ Content file with two settings which override the values set for [Filelist](http
 The following setting can be configured in file `system/extensions/yellow-system.ini`:
 
 `PerpageRestriction` = enable per page settings restriction, 0 or 1  
-`PerpageSettings` = a comma separated list of settings which may be overridden, when `PerpageRestriction` is set to 1  
+`PerpageSettings` = a comma separated list of settings which may be overridden when restriction in enabled, e.g. `TocHeadingNumber, GalleryStyle`; you can also use wildcards, e.g. `Toc*`  
 
 ## Developer
 
