@@ -1,6 +1,6 @@
 Perpage 0.8.23
 =================
-Override system settings with per page settings.
+Override system settings with per-page settings.
 
 ## How to install an extension
 
@@ -10,9 +10,9 @@ Override system settings with per page settings.
 
 To override in a page the system setting of an extension, add a [page setting](https://github.com/annaesvensson/yellow-core#settings-page) with the same name at the top of a page.
 
-## How to restrict per page settings
+## How to restrict per-page settings
 
-If you don't want that any system setting may be overridden, then restrict per page settings. You should do this for security reasons if several users can add or edit pages. Open file `system/extensions/yellow-system.ini`, change `PerpageRestriction: 1`, and write after `PerpageSettings:` a comma separated list of the system settings that you want to be overridable.
+If you don't want all system setting to be able to be overridden, then restrict per-page settings. You should do this for security reasons if several users can add or edit pages. Open file `system/extensions/yellow-system.ini`, change `PerpageRestriction: 1`, and write after `PerpageSettings:` a comma separated list of the system settings that you want to be overridable.
 
 ## Example
 
@@ -34,7 +34,7 @@ Content file with two settings which override the values set for [Toc](https://g
 
 The following setting can be configured in file `system/extensions/yellow-system.ini`:
 
-`PerpageRestriction` = enable per page settings restriction, 0 or 1  
+`PerpageRestriction` = enable per-page settings restriction, 0 or 1  
 `PerpageSettings` = a comma separated list of settings which may be overridden when restriction in enabled, e.g. `TocHeadingNumber, GalleryStyle`; you can also use wildcards, e.g. `Toc*`  
 
 ## Developer
