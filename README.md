@@ -16,17 +16,23 @@ If you don't want all system setting to be able to be overridden, then restrict 
 
 ## Example
 
-Content file with two settings which override the values set for [Toc](https://github.com/annaesvensson/yellow-toc) and [Gallery](https://github.com/annaesvensson/yellow-gallery):
+Content file with a page setting which override a system setting for [Toc](https://github.com/annaesvensson/yellow-toc):
 
     ---
     Title: Example page
-    Description: Example for your website
-    TocHeadingLevels: 2
-    GalleryStyle: zoom
+    TocHeadingNumber: 0
     ---
+    [toc]
+    
+    ## First heading
+    
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut 
     labore et dolore magna pizza. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
+    nisi ut aliquip ex ea commodo consequat.
+    
+    ## Second heading
+    
+    Duis aute irure dolor in reprehenderit in voluptate velit 
     esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt 
     in culpa qui officia deserunt mollit anim id est laborum.
 
@@ -35,7 +41,7 @@ Content file with two settings which override the values set for [Toc](https://g
 The following setting can be configured in file `system/extensions/yellow-system.ini`:
 
 `PerpageRestriction` = enable per-page settings restriction, 0 or 1  
-`PerpageSettings` = a comma separated list of settings which may be overridden when restriction in enabled, e.g. `TocHeadingNumber, GalleryStyle`; you can also use wildcards, e.g. `Toc*`  
+`PerpageSettings` = a comma separated list of settings which may be overridden when restriction in enabled, e.g. `TocHeadingNumber, TocHeadingLevels`; you can also use wildcards, e.g. `Toc*`  
 
 ## Developer
 
