@@ -38,10 +38,10 @@ Content file with a page setting which override a system setting for [Toc](https
 
 ## Settings
 
-The following setting can be configured in file `system/extensions/yellow-system.ini`:
+The following settings can be configured in file `system/extensions/yellow-system.ini`:
 
 `PerpageRestriction` = enable per-page settings restriction, 0 or 1  
-`PerpageSettings` = a comma separated list of settings which may be overridden when restriction in enabled, e.g. `TocHeadingNumber, TocHeadingLevels`; you can also use wildcards, e.g. `Toc*`  
+`PerpageSettings` = a comma separated list of settings which may be overridden when restriction in enabled, e.g. `TocHeadingNumber, TocHeadingLevels`; you can also use a wildcard after the name of an extension, e.g. `Toc*`  
 
 ## Developer
 
